@@ -18,4 +18,13 @@ public class KafkaTopicConfig {
                 .build();
     }
 
+    @Bean
+    public NewTopic scheduledTopic(){
+        return TopicBuilder
+                .name("scheduled")
+                .build();
+    }
+
+
+
 }

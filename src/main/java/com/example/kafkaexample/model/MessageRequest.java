@@ -1,4 +1,4 @@
-package com.example.kafkaexample;
+package com.example.kafkaexample.model;
 
 /**
  * @author subham.mallick on 20/04/22

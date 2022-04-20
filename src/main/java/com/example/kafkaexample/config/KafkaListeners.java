@@ -1,4 +1,4 @@
-package com.example.kafkaexample;
+package com.example.kafkaexample.config;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,15 @@ public class KafkaListeners {
             topics = "subhamCode",
             groupId = "groupId-foo-1"
     )
-    void listener(String data){
+    void listenerSubhamCode(String data){
+        System.out.println("RECEIVED: " + data + " :) ");
+    }
+
+    @KafkaListener(
+            topics = "scheduled",
+            groupId = "groupId-foo-1"
+    )
+    void listenerScheduled(String data){
         System.out.println("RECEIVED: " + data + " :) ");
     }
 
